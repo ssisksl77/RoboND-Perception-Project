@@ -1,0 +1,76 @@
+object_list:
+- arm_name: right
+  object_name: &id001 !!python/object/new:std_msgs.msg._String.String
+    state:
+    - *id001
+  pick_pose:
+    orientation:
+      w: 0.0
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    position:
+      x: 0.4828053116798401
+      y: -0.04700460284948349
+      z: 0.7096718549728394
+  place_pose:
+    orientation:
+      w: 0.0
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    position:
+      x: 0
+      y: 0
+      z: 0
+  test_scene_num: 1
+- arm_name: right
+  object_name: &id002 !!python/object/new:std_msgs.msg._String.String
+    state:
+    - *id002
+  pick_pose:
+    orientation:
+      w: 0.0
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    position:
+      x: 0.4828053116798401
+      y: -0.04700460284948349
+      z: 0.7096718549728394
+  place_pose:
+    orientation:
+      w: 0.0
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    position:
+      x: 0
+      y: 0
+      z: 0
+  test_scene_num: 1
+- arm_name: left
+  object_name: &id003 !!python/object/new:std_msgs.msg._String.String
+    state:
+    - *id003
+  pick_pose:
+    orientation:
+      w: 0.0
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    position:
+      x: 0.4828053116798401
+      y: -0.04700460284948349
+      z: 0.7096718549728394
+  place_pose:
+    orientation:
+      w: 0.0
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    position:
+      x: 0
+      y: 0
+      z: 0
+  test_scene_num: 1

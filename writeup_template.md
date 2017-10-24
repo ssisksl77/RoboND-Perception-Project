@@ -1,9 +1,37 @@
 ## Project: Perception Pick & Place
 ### Writeup Template: You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
 
----
+1. previous Exercises
+First of all, I've used the previous Exercise which is 'sensor_stick' Exercise.
+  filtering RANSAC Exercise : https://www.youtube.com/watch?v=vt0QpQmOjto
+  Cluster Visulization : https://www.youtube.com/watch?v=xcQ5ySgGAMM
+  Object Recognition : https://www.youtube.com/watch?v=bwYcwcsnXbU
+  Train SVM : https://www.youtube.com/watch?v=GXwLPqTjkZ8
+also contained in this repository
+
+2. Project, capture features
+To Train SVM in project. I've used the 'sensor_stick' project. I've changed models and capture features.
+![ex_screenshot](./img/moving_models.png)
+moving models folder from Project to sensor_stick (models_backup is for sensor_stick)
+![ex_screenshot](./img/setting_models_list.png)
+before capturing features, should change models list
+
+  Train Project SVM : https://www.youtube.com/watch?v=dOeFrYC3-7Y
+the accuracy was not that great. perhaps I should've looped more.
+
+3. Project, Object Recognition
+copied from model.sav which I'd made before in sensor_stick to project script folder. and recognize. 
+https://www.youtube.com/watch?v=jIqS3NERcH8
+
+result outputs is in yaml folder
+and images are below.
+![ex_screenshot](./img/yaml_01.img)
+![ex_screenshot](./img/yaml_02.img)
+![ex_screenshot](./img/yaml_03.img)
 
 
+
+============================================================================
 # Required Steps for a Passing Submission:
 1. Extract features and train an SVM model on new objects (see `pick_list_*.yaml` in `/pr2_robot/config/` for the list of models you'll be trying to identify). 
 2. Write a ROS node and subscribe to `/pr2/world/points` topic. This topic contains noisy point cloud data that you must work with.

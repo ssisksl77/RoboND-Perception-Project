@@ -21,7 +21,6 @@ the accuracy was not that great. perhaps I should've looped more.
 
 3. Project, Object Recognition
 copied from model.sav which I'd made before in sensor_stick to project script folder. and recognize. 
-https://www.youtube.com/watch?v=jIqS3NERcH8
 
 result outputs is in yaml folder
 and images are below.

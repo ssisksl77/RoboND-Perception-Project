@@ -32,6 +32,9 @@ yaml_02
 yaml_03
 
 
+REVIEW: 
+1. To finish this project. what I could do was just reading. I've never learned like this. so, I sometimes used LIVE asking and just read lectures over and over.
+2. To get better result. I could spend more time to capture features( more loop). that will make better model.sav and better result.
 
 ============================================================================
 # Required Steps for a Passing Submission:

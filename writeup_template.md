@@ -25,11 +25,11 @@ https://www.youtube.com/watch?v=jIqS3NERcH8
 
 result outputs is in yaml folder
 and images are below.
-![ex_screenshot](./img/yaml_01.img)
+![ex_screenshot](./img/yaml_01.png)
 yaml_01
-![ex_screenshot](./img/yaml_02.img)
+![ex_screenshot](./img/yaml_02.png)
 yaml_02
-![ex_screenshot](./img/yaml_03.img)
+![ex_screenshot](./img/yaml_03.png)
 yaml_03
 
 

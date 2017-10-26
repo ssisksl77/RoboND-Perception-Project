@@ -169,8 +169,9 @@ def pr2_mover(object_list):
         object_name = object_list_param[i]['name']
         object_group = object_list_param[i]['group']
     # TODO: Loop through the pick list
-        for object_i, object_val in enumerate(object_list):
-            if object_name == object_list[object_i]:
+        # for object_i, object_val in enumerate(object_list):
+        for object_val in object_list:
+            if object_name != object_val.label:
                 continue
             # test_scene_num : Int32(), valid value: 1,2,3
             test_num = 3

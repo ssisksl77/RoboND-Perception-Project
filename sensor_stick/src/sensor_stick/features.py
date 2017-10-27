@@ -34,7 +34,7 @@ def compute_color_histograms(cloud, using_hsv=True):
         channel_3_vals.append(color[2])
     
     # TODO: Compute histograms
-    nbins = 32
+    nbins = 64
     bins_range = (0,256)
     h_hist = np.histogram(channel_1_vals, bins=nbins, range=bins_range)
     s_hist = np.histogram(channel_2_vals, bins=nbins, range=bins_range)

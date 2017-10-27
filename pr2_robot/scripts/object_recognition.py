@@ -54,6 +54,7 @@ def pcl_callback(pcl_msg):
     # TODO: Convert ROS msg to PCL data
     pcl_data = ros_to_pcl(pcl_msg)    
     # TODO: Statistical Outlier Filtering
+    # TODO: Voxel Grid Downsampling
     vox = pcl_data.make_voxel_grid_filter()
     LEAF_SIZE = 0.01
     vox.set_leaf_size(LEAF_SIZE, LEAF_SIZE, LEAF_SIZE)
@@ -64,12 +65,17 @@ def pcl_callback(pcl_msg):
     x = 1.0 
     outlier_filter.set_std_dev_mul_thresh(x)
     cloud_filter = outlier_filter.filter()
-    # TODO: Voxel Grid Downsampling
+
+    # TODO: PassThrough Filter
+    passthrough_y = cloud_filtered.make_passthrough_filter()
+    passthrough_y.set_filter_field_name('y')
+    passthrough_y.set_filter_limits(-0.5, 0.5)
+    cloud_filtered = passthrough_y.filter()
+
     passthrough = cloud_filtered.make_passthrough_filter()
     filter_axis = 'z'
     axis_min = 0.6
-    axis_max = 1.1
-    # TODO: PassThrough Filter
+    axis_max = 1.0
     passthrough.set_filter_field_name(filter_axis)
     passthrough.set_filter_limits(axis_min, axis_max)
     cloud_filtered = passthrough.filter()
@@ -166,20 +172,22 @@ def pr2_mover(object_list):
     
     # TODO: Parse parameters into individual variables
     for i, object_param in enumerate(object_list_param):
-        object_name = object_list_param[i]['name']
+        ros_object_name = object_list_param[i]['name']
         object_group = object_list_param[i]['group']
     # TODO: Loop through the pick list
         # for object_i, object_val in enumerate(object_list):
         for object_val in object_list:
-            if object_name != object_val.label:
+            if ros_object_name != object_val.label: # skip not correct
+                print('what is this', ros_object_name, object_val.label)
                 continue
             # test_scene_num : Int32(), valid value: 1,2,3
             test_num = 3
             test_scene_num = Int32()
             test_scene_num.data = test_num  # 1, 2 or 3
              # object_name : std_msgs/String
+            
             object_name = String()
-            object_name.data = object_name
+            object_name.data = ros_object_name
             # TODO: Assign the arm to be used for pick_place
             # arm_name : std_msgs/String, valid value: left, right
             arm_name = String()

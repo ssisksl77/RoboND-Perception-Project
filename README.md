@@ -4,10 +4,13 @@
 ## previous Exercises
 First of all, I've used the previous Exercise which is 'sensor_stick' Exercise.
   1. filtering RANSAC Exercise : https://www.youtube.com/watch?v=vt0QpQmOjto
+    - In this project, passthrough filter should be two. I've realized there are two boxes one the left and right hand side. you should make a filter with y-axis
   2. Cluster Visulization : https://www.youtube.com/watch?v=xcQ5ySgGAMM
   3. Object Recognition : https://www.youtube.com/watch?v=bwYcwcsnXbU
   4. Train SVM : https://www.youtube.com/watch?v=GXwLPqTjkZ8
 also contained in this repository
+
+
 
 ## Project, capture features
 ### first submit
